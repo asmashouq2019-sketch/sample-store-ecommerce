@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import ProductArt from './ProductArt.jsx';
+import ProductImage from './ProductImage.jsx';
 import { money } from '../data/products.js';
 
 export default function CartDrawer({ open, items, onClose, onQty, onRemove, onCheckout }) {
@@ -28,7 +28,7 @@ export default function CartDrawer({ open, items, onClose, onQty, onRemove, onCh
           <ul className="lines">
             {items.map(i => (
               <li key={i.id} className="line">
-                <div className="thumb"><ProductArt type={i.art} colors={i.colors} label="" /></div>
+                <div className="thumb"><ProductImage product={i} /></div>
                 <div className="line-info">
                   <p className="line-name">{i.name}</p>
                   <p className="line-price">{money(i.price)}</p>

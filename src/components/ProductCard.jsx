@@ -1,11 +1,11 @@
-import ProductArt from './ProductArt.jsx';
+import ProductImage from './ProductImage.jsx';
 import { money } from '../data/products.js';
 
 export default function ProductCard({ product, onAdd }) {
   return (
     <article className="card">
       <div className="card-art">
-        <ProductArt type={product.art} colors={product.colors} label={`Illustration of ${product.name}`} />
+        <ProductImage product={product} />
         {product.tag && <span className="tag">{product.tag}</span>}
       </div>
       <div className="card-body">

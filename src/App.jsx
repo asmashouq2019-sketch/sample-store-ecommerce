@@ -67,7 +67,8 @@ export default function App() {
       <Header count={count} onCart={() => setCartOpen(true)} query={query} onQuery={setQuery} />
       <main id="top">
         <section className="hero">
-          <div className="container">
+          <img className="hero-img" src="images/hero-banner.jpg" alt="" width="1600" height="700" fetchpriority="high" onError={e => { e.currentTarget.style.display = 'none'; }} />
+          <div className="container hero-copy">
             <p className="eyebrow">Concept store · React + Vite</p>
             <h1>Everyday objects for a calmer home.</h1>
             <p className="lead">A front-end ecommerce demo with filtering, sorting, a persistent cart drawer and a validated checkout UI. All products are fictional.</p>
